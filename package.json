@@ -1,0 +1,35 @@
+{
+  "name": "copy-paste",
+  "version": "1.0.0",
+  "description": "Gerenciador de área de transferência",
+  "main": "dist/main.js",
+  "scripts": {
+    "start": "tsc && electron . --disable-gpu --disable-software-rasterizer",
+    "build": "tsc && electron-builder",
+    "postinstall": "npm install -g electron"
+  },
+  "build": {
+    "appId": "com.example.clipboardmanager",
+    "productName": "Clipboard Manager",
+    "files": [
+      "dist/**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ItanuRomero/copy-paste.git"
+  },
+  "author": "https://github.com/ItanuRomero",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ItanuRomero/copy-paste/issues"
+  },
+  "homepage": "https://github.com/ItanuRomero/copy-paste#readme",
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  }
+}
